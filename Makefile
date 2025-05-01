@@ -1,10 +1,7 @@
 .SILENT:
 FROM_RE = 0
 
-yellow = \033[0;33m
-RESET = \033[0m
-
-SRC = ./src/test.c
+SRC = ./src/main.c
 
 OBJ_DIR = obj/
 OBJ = $(patsubst %.c,$(OBJ_DIR)%.o,$(SRC))
@@ -21,6 +18,9 @@ MESSAGE_ALL = "All files are compiled."
 MESSAGE_ALREADY = "All files are already up-to-date."
 MESSAGE_C = "All files are clean."
 MESSAGE_FC = "All files and name are clean."
+
+yellow = \033[0;33m
+RESET = \033[0m
 
 all: $(NAME)
 
