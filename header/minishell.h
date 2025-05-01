@@ -6,15 +6,25 @@
 /*   By: emgret <emegret@student.42lausanne.ch>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 09:23:52 by emgret            #+#    #+#             */
-/*   Updated: 2025/05/01 09:35:11 by emgret           ###   ########.fr       */
+/*   Updated: 2025/05/01 14:32:09 by emgret           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINISHELL_H
 # define MINISHELL_H
 
-# include <stdlib.h>
 # include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <string.h>
+# include <errno.h>
+# include <fcntl.h>
+# include <sys/types.h>
+# include <sys/wait.h> 
+# include <signal.h>
+# include <readline/readline.h>
+# include <readline/history.h>
+# include <limits.h>
 
 typedef struct s_cmd
 {
